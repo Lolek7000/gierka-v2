@@ -15,4 +15,9 @@ public class Wybor {
         int wbud = odt.nextInt();
         return wbud;
     }
+    int coZrobicPW(){
+        System.out.println("Co zrobic?: 1 - buduj; 2 - zmień pole");
+        int cr = odt.nextInt();
+        return cr;
+    }
 }

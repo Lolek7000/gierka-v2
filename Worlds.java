@@ -14,29 +14,32 @@ public class Worlds {
         Budynki build = new Budynki();
         List wynik = new ArrayList();
         while (true) {
-            Wybor wbp = new Wybor();
-            String pole = wbp.wybierzPole();
-            if (a.indexOf(pole) >= 0){
-                int bud = wbp.wybierzBudynek();
-                wynik = build.Buduj(pole, bud);
-                a.remove(pole);
+            while (true) {
+                Wybor wbp = new Wybor();
+                String pole = wbp.wybierzPole();
+                if (a.indexOf(pole) >= 0) {
+                    int cr = wbp.coZrobicPW();
+                    if (cr == 1) {
 
-            }
-            else {
-                System.out.println(kon.coTuJest(pole,wynik));
-
-
-
-
-
-
+                        int bud = wbp.wybierzBudynek();
+                        wynik = build.Buduj(pole, bud);
+                        a.remove(pole);
+                    } else {
+                        break;
                     }
+
+
+                } else {
+                    System.out.println(kon.coTuJest(pole, wynik));
+
 
                 }
 
             }
-        }
 
+        }
+    }
+}
 
 
 
