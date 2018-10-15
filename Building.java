@@ -18,14 +18,7 @@ public class Building {
             System.out.println("gratulacje zbudowales tartak");
             return buildings;
             //tu niĹĽej else moĹĽe byÄ‡ w tej samej linii i spacja po else
-        } else{
-
-            // TODO uĹĽytkownik moĹĽe wpisaÄ‡ "a" zamiast liczby i co wtedy? :D
-            // leci bĹ‚Ä…d, sytuacje brzegowe trzeba jakoĹ› obsĹ‚uĹĽyÄ‡ ;)
-            // np sprawdziÄ‡ czy to coĹ› innego niĹĽ cyfra i napisaÄ‡, ĹĽe dozwolone tylko podane liczby
-            return buildings;
-        }
-
+        } else { return buildings; }
     }
 }
 
