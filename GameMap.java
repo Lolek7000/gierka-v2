@@ -2,20 +2,20 @@ package gierka;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
-public class Mapa {
+public class GameMap {
+
     String[] wysokosc = {"1", "2", "3", "4", "5"};
     String[] dlugosc = {"a", "b", "c", "d", "e"};
-    List lista = new ArrayList();
+    List<String> gameField = new ArrayList<>();
 
-    List tworzmape() {
+    List createMap(){
         for (String i : wysokosc) {
             for (String j : dlugosc) {
-                lista.add(i + j);
+                gameField.add(i + j);
             }
         }
-        return lista;
+        return gameField;
     }
 
 }
