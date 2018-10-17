@@ -1,4 +1,4 @@
-package gierka.Buildings;
+package gierkaV2.Buildings;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,8 +9,12 @@ public class Farma {
         List<Integer>result = new ArrayList<>();
         result.add(1);
         result.add(1);
-        System.out.println(result);
         return result;
     }
-    public void Upgrade(){}
-}
+    public void upgrade(List<Integer>lvl){
+        int up = lvl.get(1) + 1;
+        lvl.remove(1);
+        lvl.add(up);
+        }
+    }
+

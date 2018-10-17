@@ -1,4 +1,4 @@
-package gierka;
+package gierkaV2;
 
 public class CheckIT {
     void checkBuild(int status) {

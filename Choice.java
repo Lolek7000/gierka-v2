@@ -1,4 +1,4 @@
-package gierka;
+package gierkaV2;
 
 import java.util.List;
 import java.util.Scanner;
@@ -18,7 +18,7 @@ public class Choice {
         int building = 0;
         try{
             building += scan.nextInt();}
-            catch(java.util.InputMismatchException b){System.out.println("nie możesz wybrać takiego budynku");}
+            catch(java.util.InputMismatchException b){}
             return building; }
 
     int actions(){
