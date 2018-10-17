@@ -18,13 +18,9 @@ public class Choice {
         int building = 0;
         try{
             building += scan.nextInt();}
-            catch(java.util.InputMismatchException b){System.out.println("nie możesz wykonać tej operacji, ponieważ:");}
-        if(building < 4 && building > 0){
+            catch(java.util.InputMismatchException b){System.out.println("nie możesz wybrać takiego budynku");}
             return building; }
-        else{
-            System.out.println("nie ma takiego budynku");
-        return 5;}
-    }
+
     int actions(){
         System.out.println("Co zrobic?: 1 - buduj; 2 - zmien pole");
         int action = 0;
@@ -33,5 +29,12 @@ public class Choice {
         catch(java.util.InputMismatchException a){System.out.println("nie możesz wykonać tej operacji");}
         return action;
     }
-
+    int secondActions(){
+        System.out.println("Co zrobic?: 1 - ulepsz;2 - zburz 3 - zmien pole");
+        int action = 0;
+        try{
+            action = scan.nextInt(); }
+        catch(java.util.InputMismatchException a){System.out.println("nie możesz wykonać tej operacji");}
+        return action;
+    }
 }
