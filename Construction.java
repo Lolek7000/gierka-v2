@@ -11,17 +11,20 @@ public class Construction {
     Kamieniolom kamieniolom = new Kamieniolom();
     Tartak tartak = new Tartak();
 
-    List building(int build) {
+    List building(int build, Sources src) {
         if (build == 1) {
             List result = farma.build();
+            src.addFood(15);
             System.out.println("Gratulacje zbudowales farme");
             return result;
         } else if (build == 2) {
             List result = kamieniolom.build();
+            src.addStone(15);
             System.out.println("Gratulacje zbudowales kamieniolom");
             return result;
         } else if (build == 3) {
             List result = tartak.build();
+            src.addWood(15);
             System.out.println("Gratulacje zbudowales tartak");
             return result;
         } else {

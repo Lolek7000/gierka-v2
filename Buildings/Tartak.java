@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Tartak{
+    int wood = 100;
     public List build(){
         List<Integer>result = new ArrayList<>();
         result.add(3);

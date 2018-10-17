@@ -30,7 +30,7 @@ public class Choice {
         return action;
     }
     int secondActions(){
-        System.out.println("Co zrobic?: 1 - ulepsz;2 - zburz 3 - zmien pole");
+        System.out.println("Co zrobic?: 1 - ulepsz; 2 - zburz; 3 - zmien pole");
         int action = 0;
         try{
             action = scan.nextInt(); }

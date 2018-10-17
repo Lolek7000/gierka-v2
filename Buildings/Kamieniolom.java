@@ -1,9 +1,10 @@
 package gierkaV2.Buildings;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Kamieniolom  {
+    int wood = 150;
+    int stone = 100;
     public List build(){
         List<Integer>result = new ArrayList<>();
         result.add(2);
