@@ -12,8 +12,8 @@ public class WorldsApp {
         Map<String, List<Integer>> buildings = new HashMap<>();
         Sources src = new Sources();
         src.food = 200;
-        src.stone = 1000;
-        src.wood = 1000;
+        src.stone = 700;
+        src.wood = 700;
         CheckIT checker = new CheckIT();
         Construction con = new Construction();
         Farma farma = new Farma();
@@ -22,15 +22,10 @@ public class WorldsApp {
         GameMap map = new GameMap();
         List<String> a = map.createMap();
         Timer timer = new Timer();
-        timer.schedule(src,0,3000);
+        timer.schedule(src,0,6000);
         while (true){
             while(true){
-                System.out.println("jedzenie w magazynie: " + src.food);
-                System.out.println("kamien w magazynie: " + src.stone);
-                System.out.println("drewno w magazynie: " + src.wood);
-                System.out.println("jedzenie na godzinę" + src.foodPT);
-                System.out.println("kamień na godzinę" + src.stonePT);
-                System.out.println("drewno na godzinę" + src.woodPT);
+                src.sourcesStatic(src);
                 Choice choice = new Choice();
                 String field = choice.selectField();
                 if (a.indexOf(field) >= 0 && buildings.containsKey(field) == false) {
@@ -53,17 +48,8 @@ public class WorldsApp {
                         int action = choice.secondActions();
                         if (action == 1) {
                             List<Integer> lvl = buildings.get(field);
-                            if (lvl.get(0) == 1) {
-                                farma.upgrade(lvl);
-                                src.addFood(15);
-                            }else if(lvl.get(0) == 2){
-                                kamieniolom.upgrade(lvl);
-                                src.addStone(15);
-                            }else if(lvl.get(0) == 3){
-                                tartak.upgrade(lvl);
-                                src.addWood(15);
+                            con.upgrade(lvl, src);
                             }
-                        }
                         else if(action == 2){
                             int bud = buildings.get(field).get(0);
                             int lvl = buildings.get(field).get(1);

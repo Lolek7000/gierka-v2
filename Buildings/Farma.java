@@ -20,8 +20,7 @@ public class Farma {
         int up = lvl.get(1) + 1;
         lvl.remove(1);
         lvl.add(up);
-        woodPrice += 40;
-        stonePrice += 40;
+
         }
     }
 
