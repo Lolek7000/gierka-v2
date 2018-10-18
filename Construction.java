@@ -47,6 +47,17 @@ public class Construction {
             System.out.println("nie ma takiego budynku");
             return null;
         }
+    }void destruction(int bud, Sources src,int lvl){
+        if(bud == 1){
+            src.foodPT -= 15 * lvl;
+            System.out.println("pomyślnie zburzyłeś farmę");
+        }else if(bud == 2){
+            src.stonePT -= 15 * lvl;
+            System.out.println("pomyślnie zburzyłeś kamieniołom");
+        }else if(bud == 3){
+            src.woodPT -= 15 * lvl;
+            System.out.println("pomyślnie zburzyłeś tartak");
+        }
     }
 }
 
