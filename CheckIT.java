@@ -10,4 +10,13 @@ public class CheckIT {
             System.out.println("tartak");
         }
     }
+    String checkSources(int wood, int stone, int woodPrice, int stonePrice){
+        if (wood >= woodPrice && stone >= stonePrice){
+            return null;
+        }else if (wood < woodPrice && stone >= stonePrice){
+            return "Za mało drewna";
+        }else if(wood >= woodPrice && stone < stonePrice){
+            return "za mało kamienia";
+        }else{return "za mało zasobów";}
+    }
 }

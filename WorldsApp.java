@@ -12,8 +12,8 @@ public class WorldsApp {
         Map<String, List<Integer>> buildings = new HashMap<>();
         Sources src = new Sources();
         src.food = 200;
-        src.stone = 200;
-        src.wood = 200;
+        src.stone = 500;
+        src.wood = 500;
         CheckIT checker = new CheckIT();
         Construction con = new Construction();
         Farma farma = new Farma();
@@ -22,7 +22,7 @@ public class WorldsApp {
         GameMap map = new GameMap();
         List<String> a = map.createMap();
         Timer timer = new Timer();
-        timer.schedule(src,0,2000);
+        timer.schedule(src,0,30000);
         while (true){
             while(true){
                 System.out.println("jedzenie w magazynie: " + src.food);
